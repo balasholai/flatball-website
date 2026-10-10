@@ -5,43 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flatball Connect</title>
 <meta name="description" content="An app for ultimate players: the WFDF rules, a daily rules quiz, drills, strategies acted out, coaching videos and a map of pickup games.">
+<meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1B1D" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
-  <header class="site">
+  <header class="brand-row">
     <a class="brand" href="./">
       <img class="logo-light" src="logo.svg" alt="">
       <img class="logo-dark" src="logo-dark.svg" alt="">
       Flatball Connect
     </a>
+    <a class="pill" href="#try">Beta</a>
   </header>
 
   <main>
-    <h1>Everything for ultimate, in one app.</h1>
-    <p class="lead">The rules, drills, strategies, coaching videos and pickup games near
-    you. Free, with no ads.</p>
+    <h1 class="large">Everything for ultimate, in one app.</h1>
+    <p class="lead">The rules, drills, strategies, coaching videos and pickup games
+    near you. Free, with no ads.</p>
+    <div class="buttons">
+      <a class="button" href="https://github.com/balasholai/flatball-releases/releases/latest">Get the Android test build</a>
+      <a class="button soft" href="#try">iPhone: coming soon</a>
+    </div>
 
-    <ul class="features">
-      <li><strong>The rules</strong><span>The WFDF Rules of Ultimate, quick answers for common calls, and the 24 hand signals.</span></li>
-      <li><strong>A daily quiz</strong><span>Five rules questions a day that get harder as your streak grows.</span></li>
-      <li><strong>Drills</strong><span>A drill library, and warm-ups to follow along.</span></li>
-      <li><strong>Strategies</strong><span>Stacks, cuts, zones and marks, acted out as animated plays.</span></li>
-      <li><strong>Watch</strong><span>Coaching videos and highlights, updated every day.</span></li>
-      <li><strong>Find a game</strong><span>A map of pickup games: post one, see who's going.</span></li>
-    </ul>
+    <div class="phones">
+      <figure class="phone"><img src="screens/learn.jpg" width="1100" height="2385" alt="The Learn tab: Quick Reference, Full Rulebook, Hand Signals, Throwing and Strategy"><figcaption>Learn</figcaption></figure>
+      <figure class="phone"><img src="screens/play.jpg" width="1100" height="2385" alt="Vertical stack acted out: #3 throws long to #7 going deep, the open side shaded green"><figcaption>Strategies, acted out</figcaption></figure>
+      <figure class="phone"><img src="screens/signals.jpg" width="1100" height="2385" alt="The hand signals, each drawn: Foul, Violation, Goal, Contest"><figcaption>The 24 hand signals</figcaption></figure>
+    </div>
 
-    <div class="card">
-      <h2>Try it</h2>
-      <p>Flatball Connect is in testing. The Android test build is free to install;
-      the iPhone version is coming.</p>
+    <h2 class="section">Rules</h2>
+    <div class="nav-cards">
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/quick-reference.svg)"></i></div>
+        <div class="text"><strong>Quick Reference</strong><span>12 common calls, each resolved in seconds</span></div></div>
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/rulebook.svg)"></i></div>
+        <div class="text"><strong>Full Rulebook</strong><span>The WFDF Rules of Ultimate, word for word, searchable</span></div></div>
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/hand-signals.svg)"></i></div>
+        <div class="text"><strong>Hand Signals</strong><span>All 24 WFDF signals, drawn</span></div></div>
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/quiz.svg)"></i></div>
+        <div class="text"><strong>Daily quiz</strong><span>Five questions a day that grow with your streak</span></div></div>
+    </div>
+
+    <h2 class="section">Skills</h2>
+    <div class="nav-cards">
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/strategy.svg)"></i></div>
+        <div class="text"><strong>Strategy</strong><span>25 plays acted out: stacks, cuts, zones and marks</span></div></div>
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/throwing.svg)"></i></div>
+        <div class="text"><strong>Throwing</strong><span>Four throws, with cues and common mistakes</span></div></div>
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/train.svg)"></i></div>
+        <div class="text"><strong>Drills</strong><span>A drill library, and warm-ups to follow along</span></div></div>
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/watch.svg)"></i></div>
+        <div class="text"><strong>Watch</strong><span>Coaching videos and highlights, new every day</span></div></div>
+    </div>
+
+    <h2 class="section">Play</h2>
+    <div class="nav-cards">
+      <div class="nav-card"><div class="badge"><i class="icon" style="--src:url(icons/find-a-game.svg)"></i></div>
+        <div class="text"><strong>Find a Game</strong><span>A map of pickup games near you. Post one, see who's going, MMP and FMP counts, reminders before kick-off</span></div></div>
+    </div>
+
+    <div class="card callout" id="try" style="margin-top:36px">
+      <p class="eyebrow">In testing</p>
+      <p>Flatball Connect is in beta. The Android test build is free to install, and
+      updates itself with a banner when a new one is out. The iPhone version is
+      coming.</p>
       <div class="buttons">
         <a class="button" href="https://github.com/balasholai/flatball-releases/releases/latest">Android test build</a>
         <a class="button soft" href="https://github.com/balasholai/flatball-releases#install-on-android">How to install</a>
       </div>
-      <p class="small">Found a bug or have an idea? Use the red <strong>BETA · Bug report</strong>
-      button in the app, or write to <a href="mailto:support@flatballconnect.app">support@flatballconnect.app</a>.</p>
+      <p class="small">Found a bug or have an idea? Tap <strong>BETA · Bug report</strong> in
+      the app, or write to <a href="mailto:support@flatballconnect.app">support@flatballconnect.app</a>.</p>
     </div>
   </main>
 
@@ -51,7 +86,9 @@
       <a href="delete-account/">Delete your account</a>
       <a href="mailto:support@flatballconnect.app">support@flatballconnect.app</a>
     </nav>
-    © 2026 Bala Malaivendan
+    <p>© 2026 Bala Malaivendan</p>
+    <p>Hand signals redrawn from the WFDF Rules of Ultimate (CC BY 4.0). Icons from
+    Google's Material Icons (CC BY 4.0).</p>
   </footer>
 </div>
 </body>
