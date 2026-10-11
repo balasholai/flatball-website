@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A game on Flatball Connect</title>
+<meta name="description" content="You've been sent a pickup game. Open it in Flatball Connect to see who's going and join.">
+<meta property="og:title" content="A game on Flatball Connect">
+<meta property="og:description" content="Open it in Flatball Connect to see who's going and join.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1B1D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="brand-row">
+    <a class="brand" href="../">
+      <img class="logo-light" src="../logo.svg" alt="">
+      <img class="logo-dark" src="../logo-dark.svg" alt="">
+      Flatball Connect
+    </a>
+  </header>
+
+  <main>
+    <p class="eyebrow">A shared game</p>
+    <h1 class="large">You've been sent a game.</h1>
+    <p class="lead">The details are in the message you were sent. Open it in Flatball
+    Connect to see who's going, and to say you're in.</p>
+
+    <h2 class="section">Have the app?</h2>
+    <div class="card">
+      <p>On Android, a game's link opens straight in the app. If you're seeing this
+      page instead, open the game from here:</p>
+      <div class="buttons">
+        <a class="button" id="open" href="../">Open in Flatball Connect</a>
+      </div>
+      <p class="muted">On iPhone, find it in the app under Find a Game; links opening the
+      app directly will come with the App Store version.</p>
+    </div>
+
+    <h2 class="section">Don't have it yet?</h2>
+    <div class="card">
+      <p>Flatball Connect is free, with no ads: the rules, drills, strategies, coaching
+      videos and pickup games near you. It's in testing on Android now.</p>
+      <div class="buttons">
+        <a class="button" href="https://github.com/balasholai/flatball-releases/releases/latest">Get the Android test build</a>
+        <a class="button soft" href="https://github.com/balasholai/flatball-releases#install-on-android">How to install</a>
+      </div>
+      <p class="muted">iPhone: coming soon.</p>
+    </div>
+  </main>
+
+  <footer class="site">
+    <nav>
+      <a href="../">Home</a>
+      <a href="../privacy/">Privacy policy</a>
+      <a href="mailto:support@flatballconnect.app">support@flatballconnect.app</a>
+    </nav>
+    <p>© 2026 Bala Malaivendan</p>
+  </footer>
+</div>
+<script>
+  // On Android, "Open in Flatball Connect" asks for the app by name, which
+  // works even before Android has checked that this site and the app belong
+  // together. Elsewhere it stays a link home.
+  (function () {
+    var id = new URLSearchParams(location.search).get('id');
+    if (!id || !/^[A-Za-z0-9-]{1,64}$/.test(id) || !/Android/i.test(navigator.userAgent)) return;
+    document.getElementById('open').href =
+      'intent://flatballconnect.app/game/?id=' + id +
+      '#Intent;scheme=https;package=com.mvprojects.flatball;end';
+  })();
+</script>
+</body>
+</html>
