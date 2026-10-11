@@ -159,6 +159,12 @@ h3 { font-size: 18px; margin: 22px 0 6px; }
 .phone figcaption {
   text-align: center; font-size: 14px; color: var(--text-2); margin-top: 10px;
 }
+/* Two more under a section's cards, side by side on any screen. */
+.phones.pair {
+  justify-content: center; overflow: visible; margin: 20px 0 0;
+  padding-left: 0; padding-right: 0;
+}
+.phones.pair .phone { width: min(220px, calc(50% - 8px)); }
 @media (min-width: 720px) {
   .phones { justify-content: center; overflow: visible; margin: 28px 0 0;
     padding-left: 0; padding-right: 0; }
