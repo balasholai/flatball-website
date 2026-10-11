@@ -19,7 +19,7 @@
   </header>
 
   <main>
-    <p class="eyebrow">Flatball Connect · Effective 10 October 2026</p>
+    <p class="eyebrow">Flatball Connect · Effective 11 October 2026</p>
     <p class="lead">Flatball Connect is an app for ultimate players, made by Bala Malaivendan
     (“we”). This says what the app collects, why, who else is involved, and what you
     can do about it.</p>
@@ -28,7 +28,7 @@
       <p class="eyebrow">The short version</p>
       <ul class="check">
         <li>You can use the rules, quiz, drills, strategies and videos without an account.</li>
-        <li>An account is needed only to post or join games, and to keep your saved things across phones.</li>
+        <li>An account is needed only to post or join games, to message other players, and to keep your saved things across phones.</li>
         <li>No ads, no analytics or tracking, and we never sell your data.</li>
         <li>You can delete your account, and what's linked to it, at any time from inside the app.</li>
       </ul>
@@ -63,6 +63,22 @@
         <p class="why muted">Whether you're going, interested, or can't make it, so the
         organizer and players know who's coming.</p>
         <span class="who">Signed-in players</span></div>
+      <div class="row"><strong>Messages</strong>
+        <p class="why muted">What you write in a game's chat or to another player, and when, so
+        it reaches them. A game's chat is read by everyone in that game, including players who
+        called out; a conversation with another player only by the two of you. The game's own
+        notices (who joined, a new time) are part of its chat.</p>
+        <span class="who">The people in the chat</span></div>
+      <div class="row"><strong>Finding you by name</strong>
+        <p class="why muted">Signed-in players can search for your username or display name to
+        send you a message request, which you can accept or decline. Turn it off in
+        Settings → Preferences; players in your games can still message you.</p>
+        <span class="who">Signed-in players</span></div>
+      <div class="row"><strong>Blocks and reports</strong>
+        <p class="why muted">Who you've blocked, so they can't message you; they aren't told.
+        If you report a message, a copy of it and who sent it, so we can look into it; we get
+        an email when one arrives, and the sender isn't told who reported it.</p>
+        <span class="who you">Only us</span></div>
       <div class="row"><strong>Bug reports and feature requests</strong>
         <p class="why muted">Your message, an optional screenshot, the app version and your phone's
         system version, and, if you're signed out, an email for a reply if you give one. To fix
@@ -91,8 +107,8 @@
     <p>We use a few services to run the app. Each receives only what it needs, and
     your phone's internet address, as any website would.</p>
     <div class="rows">
-      <div class="row"><strong>Supabase</strong><p class="why muted">Stores accounts, saved data, games and bug reports.</p></div>
-      <div class="row"><strong>Resend</strong><p class="why muted">Sends the sign-in and reset emails, and our bug-report alerts.</p></div>
+      <div class="row"><strong>Supabase</strong><p class="why muted">Stores accounts, saved data, games, messages and reports.</p></div>
+      <div class="row"><strong>Resend</strong><p class="why muted">Sends the sign-in and reset emails, and our alerts for bug reports and reported messages.</p></div>
       <div class="row"><strong>YouTube</strong><p class="why muted">Plays the videos in Watch, through its official player, under
         <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p></div>
       <div class="row"><strong>OpenFreeMap and Photon (by Komoot)</strong><p class="why muted">The map and the place search. They receive
@@ -112,6 +128,9 @@
         <li>Your account and everything linked to it: until you delete your account.</li>
         <li>Bug reports and feature requests: until we've dealt with them. If you delete
           your account, they're kept without any link to you.</li>
+        <li>Messages to another player: 90 days from when they're sent, then deleted.</li>
+        <li>A game's chat: deleted 30 days after the game.</li>
+        <li>Reports of messages: until we've dealt with them.</li>
         <li>Failed sign-in attempts: one day.</li>
       </ul>
     </div>
@@ -120,7 +139,9 @@
     <div class="card">
       <p>In the app: <strong>Settings → tap your profile → Delete account</strong>. This
       deletes at once your sign-in and email, your profile and photo, everything you've
-      saved, games you organized, and your place in other games.</p>
+      saved, games you organized and their chats, your place in other games, and your
+      conversations with other players. What you wrote in other players' game chats stays,
+      shown as “Deleted player”, until that chat is deleted 30 days after the game.</p>
       <p>You can also <a href="../delete-account/">ask us to delete it</a> without the app.</p>
     </div>
 
@@ -132,14 +153,14 @@
     30 days.</p>
 
     <h2 class="section">Children</h2>
-    <p>You need to be at least 13 to create an account. If you're under 18, please ask a
-    parent or guardian first. If you think a child has created an account without
-    permission, tell us and we'll delete it.</p>
+    <p>You need to be 18 or over to create an account: accounts can message other players.
+    Everything else in the app works without one. If you think someone under 18 has an
+    account, tell us and we'll delete it.</p>
 
     <h2 class="section">Keeping it safe</h2>
     <p>Everything travels encrypted (HTTPS). Your email and saved data can be read only
-    by you and by us, and your profile only by signed-in players, enforced by the
-    database itself.</p>
+    by you and by us, your profile only by signed-in players, and a conversation only by
+    the people in it, enforced by the database itself.</p>
 
     <h2 class="section">Changes</h2>
     <p>If this policy changes, we'll update it here and change the date at the top. For a
