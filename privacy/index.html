@@ -19,7 +19,7 @@
   </header>
 
   <main>
-    <p class="eyebrow">Flatball Connect · Effective 13 October 2026</p>
+    <p class="eyebrow">Flatball Connect · Effective 16 October 2026</p>
     <p class="lead">Flatball Connect is an app for ultimate players, made by Bala Malaivendan
     (“we”). This says what the app collects, why, who else is involved, and what you
     can do about it.</p>
@@ -79,6 +79,11 @@
         system version, and, if you're signed out, an email for a reply if you give one. To fix
         problems and plan the app; we get an email when one arrives.</p>
         <span class="who you">Only us</span></div>
+      <div class="row"><strong>Your phone's notification token (signed in, Android)</strong>
+        <p class="why muted">A code from Google that lets us send that phone notifications: a
+        new message in a game's chat, a player joining a game you organize, and a game you're
+        in moving or being called off. Forgotten when you sign out on that phone.</p>
+        <span class="who you">Only us</span></div>
       <div class="row"><strong>Failed sign-in attempts</strong>
         <p class="why muted">A username and a time, to slow down password guessing. Deleted after a day.</p>
         <span class="who you">Only us</span></div>
@@ -97,6 +102,11 @@
     <h3>Notifications</h3>
     <p>Game reminders are scheduled on your phone. We don't send them, and no
     notification data leaves your phone.</p>
+    <p>Signed in on Android, we also send notifications through Google's Firebase
+    Cloud Messaging: a chat message (the game's title, the sender's name and the
+    message), a player joining a game you organize, and a change to a game you're in.
+    Muting a game's chat stops its messages. You can turn notifications off in your
+    phone's settings, all of them or just Game chats or Game changes.</p>
 
     <h2 class="section">Who else is involved</h2>
     <p>We use a few services to run the app. Each receives only what it needs, and
@@ -104,6 +114,9 @@
     <div class="rows">
       <div class="row"><strong>Supabase</strong><p class="why muted">Stores accounts, saved data, games, messages and reports.</p></div>
       <div class="row"><strong>Resend</strong><p class="why muted">Sends the sign-in and reset emails, and our alerts for bug reports and reported messages.</p></div>
+      <div class="row"><strong>Google Firebase Cloud Messaging</strong><p class="why muted">Delivers notifications to your phone, so it receives
+        your phone's notification token and what each notification says, under
+        <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p></div>
       <div class="row"><strong>YouTube</strong><p class="why muted">Plays the videos in Watch, through its official player, under
         <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p></div>
       <div class="row"><strong>OpenFreeMap and Photon (by Komoot)</strong><p class="why muted">The map and the place search. They receive
@@ -125,6 +138,8 @@
           your account, they're kept without any link to you.</li>
         <li>A game's chat: deleted 30 days after the game.</li>
         <li>Reports of messages: until we've dealt with them.</li>
+        <li>Your phone's notification token: until you sign out on that phone, or Google
+          tells us the app is no longer on it.</li>
         <li>Failed sign-in attempts: one day.</li>
       </ul>
     </div>
@@ -133,7 +148,8 @@
     <div class="card">
       <p>In the app: <strong>Settings → tap your profile → Delete account</strong>. This
       deletes at once your sign-in and email, your profile and photo, everything you've
-      saved, games you organized and their chats, and your place in other games. What you
+      saved, games you organized and their chats, your place in other games, and your
+      phones' notification tokens. What you
       wrote in other players' game chats stays,
       shown as “Deleted player”, until that chat is deleted 30 days after the game.</p>
       <p>You can also <a href="../delete-account/">ask us to delete it</a> without the app.</p>
